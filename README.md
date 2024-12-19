@@ -60,7 +60,7 @@ pthread_create(&schedule_thread, NULL, perform_schedule, NULL); // 예약한 시
 블루투스, 거리 측정, 예약 확인 쓰레드를 각각 사용
 <br/><br/>
 
-### - ${\large{\color{skyblue}블루투스 쓰레드}}$ 주요 명령어
+- ${\large{\color{skyblue}블루투스 쓰레드}}$  ${\large주요 명령어}$
 1. **CONNECT** : 블루투스 앱과 연결이 되었을 때 예약된 스케줄을 모두 전송 받아 출력, 청소기의 상태에 따라 켜져있을 때와 꺼져있을 때를 확인해 출력
 2. **START** : 청소기와 청소 솔의 시작 신호를 1(ON)로 변경
 3. **STOP** : 청소기의 청소 솔의 시작 신호를 0(OFF)으로 변경
@@ -70,13 +70,13 @@ pthread_create(&schedule_thread, NULL, perform_schedule, NULL); // 예약한 시
 받아오는 명령어에 따라 역할을 수행
 <br/><br/>
 
-### - ${\large{\color{skyblue}거리측정 쓰레드}}$ 주요 기능 순서 
+- ${\large{\color{skyblue}거리측정 쓰레드}}$  ${\large주요 기능 순서}$
 1. 초음파센서를 사용해 장애물과의 distance를 파악
 2. 임의로 정한 임계값보다 distance가 가까워질 경우 장애물이 감지되었다고 판단
 3. 기기를 기준으로 180도 회전 후 직진 (좌, 우 반복해서 기기가 지그재그로 움직이도록 설계)
 <br/><br/>
 
-### - ${\large{\color{skyblue}예약 확인 쓰레드}}$ 주요 기능 순서
+- ${\large{\color{skyblue}예약 확인 쓰레드}}$  ${\large주요 기능 순서}$
 1. time.h의 함수를 사용해 현재시간 측정(RTC 모듈의 배터리가 없어 대체)
 2. 현재의 시간과 RTC 모듈의 시간을 1초마다 탐색하면서 스케줄을 비교
 3. 청소기가 켜져 있을 때 스케줄을 비교해 같은 시간이 되었을 때 청소기를 시작
